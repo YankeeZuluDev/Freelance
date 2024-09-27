@@ -1,0 +1,363 @@
+/* vars */
+:root {
+  --primary-color: #080808;
+  --secondary-color: #1B1B1B;
+  --btns-color: #232323;
+  --text-color: #9C9C9C;
+  --dark-green: #3F8E00;
+  --light-green: #62BA1B;
+  --header-font : "Raleway";
+  --text-font: "IBM Plex Mono";
+  --default-header-font : "sans-serif";
+  --default-text-font: "consolas"
+}
+
+/* tags */
+
+body {
+  margin: 0;
+  background-color: var(--primary-color);
+}
+
+h1 {
+  color: white;
+  font-family: var(--header-font, var(--default-header-font));
+  font-size: 3rem;
+  font-weight: 800;
+}
+
+h2 {
+  color: white;
+  font-family: var(--header-font, var(--default-header-font));
+  font-size: 2.3rem;
+  font-weight: 800;
+}
+
+h3 {
+  color: white;
+  font-family: var(--header-font, var(--default-header-font));
+  font-size: 1.5rem;
+  font-weight: 800;
+  white-space: nowrap;
+}
+
+section {
+  margin-block: 15em;
+}
+
+footer {
+  text-align: center;
+  margin: 0.7em;
+}
+
+/* classes */
+
+.container {
+  width: min(1300px, 100% - 7rem);
+  margin-inline: auto;
+}
+
+.navbar {
+  z-index: 1;
+  position: fixed;
+  top: 0;
+  background-color: var(--secondary-color);
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  border-top-left-radius: 0 !important;
+  border-top-right-radius: 0 !important;
+}
+
+.navbar-btns {
+  text-align: center;
+  flex-basis: 70%;
+  flex-grow: 1;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.navbar-btn {
+  text-decoration: none;
+  border: 0;
+  padding: 0.75rem;
+  text-wrap: nowrap;
+  background-color: var(--secondary-color);
+  flex-grow: 1;
+  cursor: pointer;
+}
+
+.navbar-btn:hover {
+  background-color: var(--btns-color);
+}
+
+.even-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+}
+
+.grid-12 {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 10px;
+}
+
+.intro-text-container {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.profile-img-container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  flex-direction: column;
+}
+
+.intro-text-container > h1 {
+  margin-block: 0.8rem;
+}
+
+.intro-text-container > p {
+  margin-block: 0.5rem;
+}
+
+.intro-text-container > button {
+  margin-block: 3rem;
+  max-width: fit-content;
+  padding: 1.5em 5em;
+  background-color: var(--dark-green);
+  border: 1px solid var(--light-green);
+  filter: drop-shadow(0px 3px 5px var(--dark-green));
+  color: white;
+  font-family: var(--text-font, var(--default-text-font));
+  font-size: 1rem;
+  font-weight: 800;
+  white-space: nowrap;
+  cursor: pointer;
+}
+
+.intro-text-container > button:hover {
+  filter: drop-shadow(0px 3px 10px var(--dark-green));
+}
+
+.text {
+  font-family: var(--text-font, var(--default-text-font));
+  font-size: 0.9rem;
+  color : var(--text-color);
+}
+
+.about-me-card {
+  background-color: var(--secondary-color);
+  grid-column: span 6;
+  min-height: 300px;
+  padding: 1rem 3rem 3rem 3rem;
+}
+
+.about-me-card p {
+  min-width: 30ch;
+}
+
+.section-header {
+  text-align: center;
+}
+
+.section-header p {
+  margin-block: 2rem;
+}
+
+.skills-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 7px;
+}
+
+.skill-btn {
+  flex-basis: 3em;
+  padding: 0.8em 1em;
+  background-color: var(--btns-color);
+  color: white;
+  font-size: 1rem;
+  font-family: var(--header-font, var(--default-header-font));
+  text-wrap: nowrap;
+  cursor:pointer;
+}
+
+.skill-btn:hover {
+  background-color: #363636;
+}
+
+.card-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  grid-template-rows: auto;
+  gap: 30px;
+  text-align: center;
+}
+
+.project-card {
+  background-color: var(--secondary-color);
+  overflow: hidden;
+}
+
+.card-content{
+  padding: 0 1.5em 1.5em 1.5em;
+}
+
+.project-card > a > img {
+  width: 100%;
+}
+
+.project-card-btn {
+  border: 2px solid grey;
+  box-sizing: border-box;
+  margin: 1em auto;
+  display: block;
+  padding: 1.5em;
+  background-color: black;
+  color: white;
+  font-family: var(--header-font, var(--default-header-font));
+  font-size: 1rem;
+  font-weight: 800;
+  white-space: nowrap;
+  cursor: pointer;
+}
+
+.card-text-content > p {
+  margin-block: 1.5em;
+}
+
+.card-btn-content a {
+  text-decoration: none;
+}
+
+.image-project-card-btn {
+  padding: 0; 
+  line-height: 0;
+  border: 0;
+  margin: 1em auto;
+  box-sizing: border-box;
+  display: block;
+  cursor: pointer;
+}
+
+.image-project-card-btn > img{
+  width: 100%; 
+  height: 100%;
+}
+
+/* .google-play-btn:hover {
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+}
+
+.project-card-btn:hover {
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+} */
+
+.icons-container {
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  margin-block: 1.5em;
+}
+
+.icons-container img {
+  width: 40px;
+  height: 40px;
+}
+
+.icons-container img:hover {
+  filter: drop-shadow(0px 1px 5px var(--dark-green));
+}
+
+.about-me-card a {
+  color: var(--text-color);
+}
+
+/* utility classes */
+
+.round-30 {
+  border-radius: 30px;
+}
+
+.round-10 {
+  border-radius: 10px;
+}
+
+.round-5 {
+  border-radius: 5px;
+}
+
+.shadow-4 {
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+}
+
+/* IDs */
+#profile-img {
+  max-width: 25em;
+}
+
+#third-about-me-card {
+  grid-column: span 12;
+}
+
+/* rules */
+
+@media (max-width: 920px) {
+
+}
+
+/* medium */
+@media (max-width: 768px) {
+  html {
+    font-size: 15px;
+  }
+
+  section {
+    margin-block: 9em;
+  }
+
+  .even-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .intro-text-container {
+    text-align: center;
+    order: 1;
+  }
+
+  .profile-img-container {
+    align-items: center;
+  }
+
+  .intro-text-container > button {
+    margin-inline: auto;
+  }
+  
+  .profile-img-container {
+    order: 0;
+  }
+
+  .about-me-card {
+    grid-column: span 12;
+  }
+}
+
+/* small */
+@media (max-width: 576px) {
+  html {
+    font-size: 12px;
+  }
+} 
+
+/* extra small */
+@media (max-width: 390px) {
+  html {
+    font-size: 11px;
+  }
+} 
